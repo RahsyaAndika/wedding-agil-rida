@@ -127,7 +127,7 @@
 
     /* HERO */
     #s-hero { min-height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; padding:80px 24px }
-    .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(26,18,8,.55) 0%,rgba(26,18,8,.85) 100%) }
+    .hero-overlay { position:absolute; inset:0; background:linear-gradient(180deg,rgba(26, 18, 8, 0.275) 0%,rgba(26, 18, 8, 0.555) 100%) }
     .names-hero { font-family:'Great Vibes',cursive; font-size:clamp(52px,13vw,88px); line-height:1.1; color:var(--gold-l) }
     .amp-hero   { font-family:'Great Vibes',cursive; font-size:clamp(36px,9vw,60px); color:var(--gold); display:block; margin:.2em 0 }
 
@@ -150,7 +150,7 @@
       background-image: url('');   /* 🔧 ganti dengan foto berdua */
       background-size:cover; background-position:center;
     }
-    #s-quote .q-overlay { position:absolute; inset:0; background:rgba(8,4,1,.80) }
+    #s-quote .q-overlay { position:absolute; inset:0; background:rgba(26, 18, 8, 0.555) }
     .quote-card {
       background-image:
         linear-gradient(135deg,rgba(18,10,2,.82),rgba(36,24,8,.85)),
@@ -333,22 +333,59 @@
 
   <div style="position:relative;z-index:3;height:100%;display:flex;flex-direction:column;padding:20px;color:white">
     <div style="text-align:center;margin-top:40px">
-      <p class="f-display shimmer" style="font-size:18px;letter-spacing:2px;text-transform:uppercase;margin-bottom:0px">The Wedding Of</p>
+      <p class="f-script shimmer font-bold" style="font-size:25px;letter-spacing:2px;margin-bottom:0px">The Wedding Of</p>
       <h1 class="f-display" style="font-size:clamp(40px,10vw,56px);color:var(--cream)">Rida &amp; Agil</h1>
     </div>
     <div style="flex:1"></div>
     <div style="text-align:center;margin-bottom:20px">
-      <div class="ornament-row"><div class="ornament-line"></div><div class="diamond-sm"></div><div class="ornament-line"></div></div>
-      <p class="f-ui" style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:rgba(232,213,176,.6);margin:10px 0">Kepada Yth.</p>
-      <h2 id="guestName" class="f-display" style="font-size:clamp(22px,6vw,30px);color:var(--cream);margin-bottom:6px">Nama Tamu Undangan</h2>
-      <p class="f-ui" style="font-size:11px;color:rgba(232,213,176,.5);letter-spacing:2px;margin-bottom:24px">beserta keluarga</p>
-      <div class="ornament-row"><div class="ornament-line"></div><div class="diamond-sm"></div><div class="ornament-line"></div></div>
+
+      <!--<div class="ornament-row">
+        <div class="ornament-line"></div>
+        <div class="diamond-sm"></div>
+        <div class="ornament-line"></div>
+      </div>-->
+
+      <!-- BLUR BOX -->
+      <div style="
+        display:inline-block;
+        margin:12px;
+        padding:19px 100px;
+        border-radius:16px;
+        background:rgba(255,255,255,0.05);
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+        border:1px solid rgba(255,255,255,0.1);
+      ">
+
+        <p class="f-display c-gl" style="font-size:13px;letter-spacing:4px;margin:0 0 6px">
+          Kepada Yth.
+        </p>
+
+        <h2 id="guestName" class="f-display" style="font-size:clamp(22px,6vw,30px);color:var(--cream);margin:0">
+          Nama Tamu Undangan
+        </h2>
+
+        <p class="f-ui c-gl" style="font-size:11px;letter-spacing:2px;margin:6px 0 0">
+          beserta keluarga
+        </p>
+
+      </div>
+      <!-- END BLUR BOX -->
+
+      <!--<div class="ornament-row">
+        <div class="ornament-line"></div>
+        <div class="diamond-sm"></div>
+        <div class="ornament-line"></div>
+      </div>-->
+
       <div style="position:relative;display:inline-block;margin-top:10px">
         <div class="ring-pulse"></div>
         <div class="ring-pulse" style="animation-delay:.5s"></div>
-        <button class="btn-open" onclick="openInvitation()"><span>✦ &nbsp;Buka Undangan&nbsp; ✦</span></button>
+        <button class="btn-open" onclick="openInvitation()">
+          <span>✦ &nbsp;Buka Undangan&nbsp; ✦</span>
+        </button>
       </div>
-      <p class="f-ui" style="font-size:10px;letter-spacing:2px;color:rgba(201,169,110,.35);margin-top:18px"></p>
+
     </div>
   </div>
 </div>
@@ -361,18 +398,34 @@
   <!-- ═══ S2 · KAMI MENGUNDANG ═══ -->
   <section id="s-hero" class="over-fixed">
     <div class="hero-overlay"></div>
-    <div style="position:relative;z-index:2;text-align:center;max-width:400px;width:100%;padding:0 20px;margin:0 auto">
-      <!--<p class="fu d0 f-ui c-gold" style="font-size:10px;letter-spacing:4px;text-transform:uppercase;margin-bottom:10px">Dengan Memohon Rahmat &amp; Ridho Allah SWT</p>-->
-      <p class="fu d1 f-script c-gl" style="font-size:clamp(38px,10vw,54px);line-height:1.25;margin-bottom:6px">The Wedding Of</p>
-      <div class="ornament-row fu d2"><div class="ornament-line"></div><div class="diamond-sm"></div><div class="ornament-line"></div></div>
-      <!-- <p class="fu d2 f-ui c-gl" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.65;margin-bottom:20px">Pada Pernikahan Putra-Putri Kami</p> -->
-      <div class="fu d3">
-        <span class="names-hero">Rida</span>
-        <span class="amp-hero">&amp; </span>
-        <span class="names-hero">Agil</span>
+    <div style="position:absolute;top:40px;left:50%;transform:translateX(-50%);z-index:2;text-align:center;max-width:360px;width:100%;padding:0 16px">
+  
+      <p class="fu d1 f-display c-cream" style="font-size:clamp(24px,6vw,28px);line-height:1.2;margin-bottom:2px">
+        The Wedding Of
+      </p>
+
+      <div class="ornament-row fu d2">
+        <div class="ornament-line"></div>
+        <div class="diamond-sm"></div>
+        <div class="ornament-line"></div>
       </div>
-      <div class="ornament-row fu d4" style="margin:24px auto"><div class="ornament-line"></div><div class="diamond-sm"></div><div class="ornament-line"></div></div>
-      <p class="fu d4 f-display c-gold" style="font-size:clamp(16px,4vw,22px);font-weight:400;letter-spacing:2px"> 18 . 05 . 2026 </p>
+
+      <div class="fu d3">
+        <span class="names-hero" style="font-size:clamp(28px,9vw,40px);letter-spacing:4px">Rida &amp; Agil</span>
+        <span class="amp-hero" style="font-size:clamp(22px,6vw,28px)"> </span>
+        <span class="names-hero" style="font-size:clamp(28px,9vw,40px)"></span>
+      </div>
+
+      <div class="ornament-row fu d4" style="margin:15px auto">
+        <div class="ornament-line"></div>
+        <div class="diamond-sm"></div>
+        <div class="ornament-line"></div>
+      </div>
+
+      <p class="fu d4 f-display c-gold" style="font-size:clamp(14px,3.5vw,18px);letter-spacing:2px">
+        18 . 05 . 2026
+      </p>
+
     </div>
   </section>
 
@@ -616,46 +669,53 @@
     <p class="fu d2 f-ui c-gl" style="text-align:center;font-size:10px;letter-spacing:2px;opacity:.4;margin-top:16px;text-transform:uppercase">Tap foto untuk memperbesar</p>-->
   </section>
 
-  <!-- ═══ S6 · WEDDING GIFT ═══ -->
-  <section id="s-gift" class="solid-sec" style="background:var(--dark);padding:72px 20px">
-    <div style="max-width:400px;margin:0 auto;text-align:center">
-      <p class="fu d0 f-ui c-gold" style="font-size:10px;letter-spacing:4px;text-transform:uppercase;margin-bottom:8px"></p>
-      <h2 class="fu d1 f-script c-gl" style="font-size:clamp(36px,9vw,52px);font-weight:400;margin-bottom:8px">Wedding Gift</h2>
-      <p class="fu d2 c-gl" style="font-size:14px;line-height:1.7;opacity:.65;margin-bottom:40px">Doa restu Anda adalah hadiah terindah bagi kami. Namun jika ingin memberikan hadiah, dapat melalui:</p>
+  <!-- ═══ SECTION 6 · WEDDING GIFT ═══ -->
+<section id="s-gift" style="background:rgba(101, 67, 33, 0.714);padding:72px 20px">
+  <div style="max-width:400px;margin:0 auto;text-align:center;">
+    <h2 class="fu d1 f-script c-cream" style="font-size:clamp(36px,9vw,52px);font-weight:400">Wedding Gift</h2>
+    <p class="anim d2 c-cream" style="font-size:14px;line-height:1.7;opacity:.65;margin-bottom:40px">Doa restu Anda adalah hadiah terindah bagi kami. Namun jika ingin memberikan hadiah, dapat melalui:</p>
 
-      <div class="gift-card fu d2" style="margin-bottom:16px">
-        <div style="position:relative;z-index:1">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
-            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,169,110,.15);border:1px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:20px">🏦</span></div>
-            <div style="text-align:left">
-              <p class="f-ui c-gold" style="font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-bottom:2px">Bank BCA</p>
-              <p class="c-gl" style="font-size:12px;opacity:.6">Rekening Mempelai</p>
-            </div>
-          </div>
-          <p class="f-ui c-gl" style="font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.55;margin-bottom:4px">Nomor Rekening</p>
-          <p class="gift-acct">1234 5678 90</p>
-          <p class="c-gl" style="font-size:14px;margin:8px 0 20px;opacity:.75">a.n. Ahmad Reza Maulana</p>
-          <button class="copy-btn" onclick="copyAcct('1234567890','BCA',this)">📋 &nbsp;Salin Nomor Rekening</button>
+    <!-- MANDIRI -->
+    <div class="gift-card anim d2" style="margin-bottom:16px">
+      <div style="position:relative;z-index:1">
+        <div style="display:flex;justify-content:center;align-items:center;margin-bottom:20px">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Bank_Mandiri_logo_2016.svg/120px-Bank_Mandiri_logo_2016.svg.png"
+                alt="Bank Mandiri"
+                style="width:120px;height:80px;object-fit:contain">
         </div>
-      </div>
-
-      <div class="gift-card fu d3">
-        <div style="position:relative;z-index:1">
-          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
-            <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,169,110,.15);border:1px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:20px">📱</span></div>
-            <div style="text-align:left">
-              <p class="f-ui c-gold" style="font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-bottom:2px">GoPay / OVO</p>
-              <p class="c-gl" style="font-size:12px;opacity:.6">E-Wallet Mempelai</p>
-            </div>
-          </div>
-          <p class="f-ui c-gl" style="font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.55;margin-bottom:4px">Nomor Dompet</p>
-          <p class="gift-acct">0812 3456 7890</p>
-          <p class="c-gl" style="font-size:14px;margin:8px 0 20px;opacity:.75">a.n. Ahmad Reza Maulana</p>
-          <button class="copy-btn" onclick="copyAcct('081234567890','GoPay/OVO',this)">📋 &nbsp;Salin Nomor</button>
-        </div>
+        <p class="f-ui c-gl" style="font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.55;margin-bottom:4px">Nomor Rekening</p>
+        <p class="gift-acct" id="acct1">1840 0062 6851 8</p>
+        <p class="c-gl" style="font-size:14px;margin:8px 0 20px;opacity:.75">a.n. UFRIDATUL KHUSNAH</p>
+        <button class="copy-btn" onclick="copyAcct('1840006268518','Mandiri',this)">
+          📋 &nbsp;Salin Nomor Rekening
+        </button>
       </div>
     </div>
-  </section>
+
+    <!-- GOPAY / OVO 
+    <div class="gift-card anim d3">
+      <div style="position:relative;z-index:1">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+          <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,169,110,.15);border:1px solid rgba(201,169,110,.3);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <span style="font-size:20px">📱</span>
+          </div>
+          <div style="text-align:left">
+            <p class="f-ui c-gold" style="font-size:9px;letter-spacing:3px;text-transform:uppercase;margin-bottom:2px">GoPay / OVO</p>
+            <p class="c-gl" style="font-size:12px;opacity:.6">E-Wallet Mempelai</p>
+          </div>
+        </div>
+        <p class="f-ui c-gl" style="font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.55;margin-bottom:4px">Nomor Dompet</p>
+        <p class="gift-acct">0812 3456 7890</p>
+        <p class="c-gl" style="font-size:14px;margin:8px 0 20px;opacity:.75">a.n. Ahmad Reza Maulana</p>
+        <button class="copy-btn" onclick="copyAcct('081234567890','GoPay/OVO',this)">
+          📋 &nbsp;Salin Nomor
+        </button>
+      </div>
+    </div>-->
+
+  </div>
+</section>
+
 
   <!-- ═══ S7 · HARAPAN & UCAPAN ═══ -->
   <section id="s-ucapan" class="solid-sec" style="background:var(--dark2);padding:72px 20px">
